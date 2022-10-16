@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg>
+
+        <!-- Bootstrap core CSS -->
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        <link href="/css/blocks.css" type="text/css" />
+        <link href="/css/style.css" rel="stylesheet" >
+        <link href="/css/blocks.css" rel="stylesheet" >
+        
+        <title>Bataille navale</title>
+    </head>
+    <body>
+        <header>
+            <nav class="bg-white navbar navbar-expand-lg navbar-light shadow-none"> 
+                <div class="container"> <a class="align-items-center d-inline-flex fw-bold h4 mb-0 navbar-brand text-uppercase" href="#"> <span>BATAILLE NAVALE</span></a> 
+                    <button class="navbar-toggler rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown-2" aria-controls="navbarNavDropdown-2" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> 
+                    </button>                                          
+                </div>                 
+            </nav>
+        </header>
+        <main>
+            <section class="bg-light pb-5 position-relative pt-5" style="height: 1500px;">
+              
+                
+                     <div class="zone-pseudo ">
+                    
+                    
+                     <form  style="position: absolute; left: 40%; width: 208px; height: 140px;" class="pseudo" method="post"> 
+                        <div class="mb-3"> 
+                        <label for="exampleInputEmail1">ENTREZ UN PSEUDO</label>                         
+                          <input type="text" id="mypseudo"  placeholder="joueur_de_bataille_navale" class="form-control"/> 
+                            </div>                     
+                               <button type="submit"  class="btn btn-success position-absolute"> Confirmer</button>                     
+                                </form>
+ 
+                            <p><br/></p></div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                <section class="bg-light pb-5 pt-5 d-none zone-serveur">
+                    <div class="container">
+                        <div class="row">
+                            <h2> Bonjour <p id="monpseudo"> </p>  vous pouvez choisir un serveur :</h2>
+                        </div>
+                        <ul class="list-group list-group-flush" id="rooms-list"></ul>
+    
+                    </div> 
+                    <button type="button" class="btn btn-success btn-lg  createserv" style="margin-left: 500px; margin-top: 50px;" data-toggle="modal" data-target="#joinsalon">
+Créer Salon                    </button>
+                                                
+                </section>
+
+                <div class="editsalon d-none zone-cree-serveur">
+                    
+                    <div class="card" style="width: 18rem;">
+                        
+                                   
+                                    <h5 class="card-title">Mon Salon :</h5>   
+                                    <div class="card-body"><div class="mb-3 adversairenom">En attente d'un joueur</div>
+                                    <div class="spinner-border" role="status"> <span class="sr-only">Loading...</span></div>
+                                   </div>
+                                                  
+                                               
+                                                    
+                        
+                                     </div>
+                        
+                                                                   
+                        <button  class="btn btn-primary btn-sm startgame d-none">Commencer le jeu</button>                         
+                        <div><button type="button" class="btn btn-primary btn-sm return1">Retourner au salons</button>     </div>  <br/>
+                                   
+                </div>
+            
+
+
+
+
+                    
+                            
+                <section class="bg-light pb-5 position-relative pt-5 vw-100 d-none zonedejeu" style="height: 1300px;">
+                    <button type="button" class="btn btn-light start" style="margin-left: 690px; background-color: #51ec0f;">Valider mes choix</button>
+                    <div class="container-fluid">
+    
+                        
+                    <div class="container-fluid float-left grille1" style="height: 500px; width: 518px; margin-left: 30px;"></div>
+                    <div class="container float-md-none"style="
+                    margin-left: 700px;
+                    margin-top: 40px;
+                    margin-right: 700px;
+                    width: 230px;
+                " > <div class="alert alert-success monmessage d-none"     style="width: 242px;"
+role="alert">
+</div></div>
+            <div class="container-fluid float-right" style="width: 515px; margin-right: 49px;">
+<h2> Flotte du joueur</h2>
+                <div class="container-fluid float-right grille2" style="width: 515px; height: 500px; margin-right: 49px;"></div></div>
+            </div>
+                    
+                    <div class="align-self-end flotte1" style="margin-left: 132px;">
+                        <h3>Flotte du joueur :&nbsp;</h3>
+                        <button type="button" class="btn btn-light rotation" style="margin-left: 253px;">Flip</button>
+                        <div class="container" style="height: 187px;">
+                            <div class="row" style="height: 220px; grid-gap: 114px; width: 600px;">
+    
+                                <div class="col-md-2" style="height: 50px; width: 50px;" >
+                                    <button class="bateau  torpilleur" style="margin-top: 250%;">
+                                        <img src="img/torpilleur.png" style="height: 50px;"/>
+                                    </button>                                 
+                                </div>  
+                                <div class="col-md-2" style="width: 50px; height: 150px;">
+                                    <button class="bateau  contre-torpilleur" >
+                                        <img src="img/contre-torpilleur.png" style="height: 150px;"/>
+                                    </button>                                 
+                                </div>
+                                <div class="col-md-2" style="width: 50px; height: 150px;">
+                                    <button class="bateau  sous-marin" >
+                                        <img src="img/sous-marin.png" style="height: 150px;"/>
+                                    </button>                                 
+                                </div>
+    
+     
+      
+    
+                            </div>
+                            <div class="row" style="height: 300px; grid-gap: 114px; width: 840px;">
+                            
+                            
+                                <div class="col-md-2" style="height: 250px;">
+                                    <button class="bateau  porte-avion" >
+                                        <img src="img/porte-avion.png" style="height: 250px;"/>
+                                    </button>                                 
+                                </div>
+    
+                                <div class="col-md-2 "  style="width: 50px; height: 200px;">
+                                    <button class="bateau croiseur" >
+                                        <img src="img/croiseur.png" style="height: 200px;"/>
+                                    </button>                                 
+                                </div>
+                            
+                            
+                            </div>
+                            <div class="col-md-2"> 
+    </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </section>
+            <div class="container">
+                <div class="col-lg-7 mx-lg-auto">
+                    <div class="align-items-center row">
+                        <div class="col">
+                            <hr class="mb-0 mt-0 text-primary"/> 
+                        </div>
+                        <div class="col-auto">
+                                                  
+                        </div>
+                        <div class="col">
+                            <hr class="mb-0 mt-0 text-primary"/> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="col-lg-7 mx-lg-auto">
+</div>
+            </div>             
+            <section class="pb-5 pt-5"> 
+                <div class="container pb-5 pt-5"> 
+                    <div class="mb-4"> 
+                        <h3 class="fw-bold h1 text-success">Projet réalisé par :</h3> 
+                    </div>
+                    <div class="gy-4 justify-content-xl-between row row-cols-lg-3 row-cols-md-3"> 
+
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" style ="height:200px;" src="https://www.santevet.com/upload/admin/images/article/PMO/FICHES%20RACES/CHATS/chat_de_gouttiere_assurance_sant%C3%A9vet.jpg" class="img-fluid mb-3 mt-n5 rounded-1" alt="..." width="100" height="100"/>
+
+                            <div class="card-body">
+                              <h5 class="card-title">Chabi Othman</h5>
+                              <div class="card-body">
+                                <p class="card-text">Etudiant en L3 Info A l'UPJV</p>
+                              </div>
+                            </div>
+                          </div>
+
+
+
+
+
+                        <div class="gy-4 justify-content-xl-between row row-cols-lg-3 row-cols-md-3"> 
+                                <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" style ="height:200px;"  src="https://images.unsplash.com/photo-1574158622682-e40e69881006?ixid=MXwyMDkyMnwwfDF8c2VhcmNofDd8fGNhdHxlbnwwfHx8&ixlib=rb-1.2.1q=85&fm=jpg&crop=faces&cs=srgb&w=400&h=400&fit=crop" class="img-fluid mb-3 mt-n5 rounded-1" alt="..." width="100" height="100"/>
+                  
+                                <div class="card-body">
+                                  <h5 class="card-title">Alan Diot</h5>
+                                  <div class="card-body">
+                                    <p class="card-text">Etudiant en L3 Info A l'UPJV</p>
+                                  </div>
+                                </div>
+                              </div>
+
+
+                                                
+                    </div>                     
+                </div>                 
+            </section>             
+            <footer class="bg-dark pb-5 pt-5 text-white-50"> 
+                <div class="container"> 
+                    <hr class="border-secondary mb-5 mt-5"/>
+                    <div class="align-items-center gy-3 row"> 
+                        <div class="col-lg-3 col-sm-6 col-xl-4"> <a class="d-inline-flex fw-bold h2 lh-1 link-primary mb-0 text-decoration-none text-uppercase" href="#"> <span class="text-success">BATAILLE NAVALE</span></a> 
+                        </div>
+                        <div class="col-lg-auto col-sm-6 order-lg-last">                              
+</div>                         
+                        <div class="col-md col-sm-6">                              
+</div>                                                  
+                    </div>                     
+                </div>                 
+            </footer>
+        </main>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/client.js"></script>
+        <script src="/js/app.js"></script>
+        <script src="/jquery/jquery.min.js"></script>
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+       
+    </body>
+</html>
